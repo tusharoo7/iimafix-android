@@ -1,0 +1,87 @@
+page-start-job-popup {
+    .qr-image {
+        position: relative;
+        background: $blue;
+        padding: 15px 0 44px;
+        ion-icon {
+            position: absolute;
+            top: 6px;
+            color: #fff;
+            font-size: 29px;
+            right: 8px;
+        }
+        h2 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 33px 12px;
+  text-align: center;
+
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 137px;
+            padding: 6px;
+            border: 1px solid #fff;
+        }
+    }
+    .or-wrap {
+        position: absolute;
+        background: #f47520;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto 7px;
+      bottom: -26px;
+        left: 50%;
+        margin-left: -20px;
+
+    }
+    .enter-otp {
+       
+        .text-input {
+            border: 1px soolid #ccc;
+            height: 40px; border-radius: 35px;
+        }
+        button {
+            width: 50%;
+            margin: 12px auto 0;
+            display: block; font-size: 14px !important;
+
+
+        }
+    }
+    .text-input-md {
+        border: 1px solid #ccc !important;
+        padding-left: 5px
+    }
+    .sign-in-bt {
+        background: $yellow;
+        @include bt-with-shadow;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        font-size: 16px;
+    }
+    .enter-otp {
+        padding: 26px 0 12px;
+    }
+    .qr-code-wrap {
+        width: 80%;
+        margin: 106px auto;
+
+        border-radius: 13px;
+        overflow: hidden;
+        background: #fff;
+    }
+    ion-content {
+
+        background: rgba(0, 0, 0, 0.8) !important;
+    }
+    button {
+        background: $yellow !important;
+    }
+}

@@ -1,0 +1,124 @@
+{
+  "project_info": {
+    "project_number": "118894696856",
+    "firebase_url": "https://resternation-5d8e1.firebaseio.com",
+    "project_id": "resternation-5d8e1",
+    "storage_bucket": "resternation-5d8e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118894696856:android:075d7853e395d53d",
+        "android_client_info": {
+          "package_name": "com.resternation.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118894696856-io6e8kt4e5jc1vhbrvhrvmi1350i8fet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.resternation.app",
+            "certificate_hash": "ef9edf6e5d2e569714d6087b8a2a3c4c58da11c9"
+          }
+        },
+        {
+          "client_id": "118894696856-1r51l6dtfjs9sf4bb09iufnbolqtjr70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvzRxdVkY1yEaVI9OVnMOMUqd6Hd313-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118894696856-1r51l6dtfjs9sf4bb09iufnbolqtjr70.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "118894696856-r4ofjvt712d3cl08tv7df28ku3buvogh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iimafix.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118894696856:android:4d14894d9ce72db3",
+        "android_client_info": {
+          "package_name": "com.iimafix.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118894696856-1r51l6dtfjs9sf4bb09iufnbolqtjr70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvzRxdVkY1yEaVI9OVnMOMUqd6Hd313-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118894696856:android:72689d736e72803f",
+        "android_client_info": {
+          "package_name": "com.iimafix.rnapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118894696856-1r51l6dtfjs9sf4bb09iufnbolqtjr70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvzRxdVkY1yEaVI9OVnMOMUqd6Hd313-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

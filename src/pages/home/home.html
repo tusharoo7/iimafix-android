@@ -1,0 +1,157 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Home {{checkmode}} </ion-title>
+        <ion-title></ion-title>
+        <button class="refresh-btn" *ngIf="myAlert=='true'" (click)="doRefreshJobalert('refresh');">
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+        <button class="refresh-btn" *ngIf="myJobs=='true'" (click)="doRefreshMyJob('refresh');">
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+
+    </ion-navbar>
+
+    <div class="custom-tab-hame-wrapper">
+        <div class="tab-title-cont">
+            <a id='myalerts' href="#" class="active" (click)="customTabToggel('myAlert','scrollToTop');">JOB ALERTS</a>
+            <a id='myjobs' href="#" class="active" (click)="customTabToggel('myJobs','scrollToTop');">MY JOBS</a>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content id="cat_height" (ionScrollEnd)='loadmore($event)'>
+    <ion-refresher *ngIf="myAlert=='true'" (ionRefresh)="doRefreshJobalert($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-refresher *ngIf="myJobs=='true'" (ionRefresh)="doRefreshMyJob($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div id='contentHeight' class="custom-tab-hame-wrapper">
+        <div class="home-new-wrap">
+
+
+            <div id='alrts' *ngIf="myAlert=='true'">
+
+                <div class="job-alerts-box" *ngFor="let jobs of dataList;let i = index; trackBy: dataList?.request_id" [ngClass]="{'animated fadeIn':animationList=='true','job-alerts-content-wrapper':true}">
+
+                    <ion-grid no-padding>
+                        <ion-row>
+                            <ion-col col-12>
+                                <h2>{{jobs.category_label}} <span class="pending"></span></h2>
+                            </ion-col>
+                            <ion-col col-12>
+                                <div class="job-alerts-box-col-1" (click)='job_details(jobs.request_id);'>
+                                    <div class="badge"> <img *ngIf="jobs.priority==1" src="assets/img/recomended-icon.png" alt=""></div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/cat_icon.png" alt="">
+                                            <b>Service</b>
+                                            <ion-label> : {{jobs.service_name}} </ion-label>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icon-1.png" alt="">
+                                            <b>Service date </b>
+                                            <ion-label> : {{jobs.service_date}} </ion-label>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icon-2.png" alt="">
+                                            <b>Appt. time </b>
+                                            <p> : {{jobs.service_from_time}} - {{jobs.service_to_time}} </p>
+                                        </li>
+
+                                        <li>
+                                            <img src="assets/img/icon-4.png" alt="">
+                                            <b>Posted on </b>
+                                            <p> : {{jobs.created_date}} </p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </ion-col>
+                            <ion-col col-12 (click)="goMap(jobs.latitude,jobs.longitude,jobs.category,jobs.address);">
+                                <div class="job-alerts-box-col-1 job-posted">
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icon-3.png" alt="">
+                                            <b>Location </b>
+                                            <ion-label>: {{jobs.address}} </ion-label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <h5 *ngIf="dataList=='' && myAlert=='true' && jobAlertempty=='true'"class='No-record'>No active jobs found, Please try again later.</h5>
+            </div>
+
+            <div id='job' *ngIf="myJobs=='true'" [ngClass]="{'job-alerts-content-wrapper my-jobs':true}">
+                <div *ngFor="let myjob of jobList;let j = index; trackBy: jobList?.request_id" [ngClass]="{'job-alerts-content-wrapper':true,'job-alerts-box':true}">
+                    <ion-grid no-padding>
+                        <ion-row>
+                            <ion-col col-12>
+                                <h2>{{myjob.category_label}}
+                                    <span [style.color]='myjob.status_color'> - {{myjob.status_label}}</span>
+                                    <!--<span *ngIf="myjob.status=='Running'" class="Running"> -{{myjob.status_label}}</span>
+                                    <span *ngIf="myjob.status=='Review Pending'" class="complete"> -{{myjob.status_label}}</span>
+                                     <span *ngIf="myjob.status=='Completed'" class="complete"> -{{myjob.status_label}}</span>-->
+                                </h2>
+                            </ion-col>
+                            <ion-col col-12>
+                                <div class="job-alerts-box-col-1" (click)='job_details(myjob.request_id);'>
+                                    <div class="badge"> <img *ngIf="myjob.label=='Recommended'" src="assets/img/recomended-icon.png" alt=""><img
+                                            *ngIf="myjob.label=='Matched'" src="assets/img/matched-icon.png" alt=""></div>
+                                    <ul>
+                                         <li>
+                                             <img src="assets/img/cat_icon.png" alt="">
+                                            <b>Service </b>
+                                            <ion-label> : {{myjob.service_name}} </ion-label>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icon-1.png" alt="">
+                                            <b>Service date </b>
+                                            <p> : {{myjob.service_date}} </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icon-2.png" alt="">
+                                            <b>Appt. time </b>
+                                            <p> : {{myjob.service_from_time}} - {{myjob.service_to_time}} </p>
+                                        </li>
+
+                                        <li>
+                                            <img src="assets/img/icon-4.png" alt="">
+                                            <b>Posted on </b>
+                                            <p> : {{myjob.created_date}} </p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </ion-col>
+                            <ion-col col-12 (click)="goMap(myjob.latitude,myjob.longitude,myjob.category,myjob.address);">
+                                <div class="job-alerts-box-col-1 job-posted">
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icon-3.png" alt="">
+                                            <b>Location </b>
+                                            <ion-label>: {{myjob.address}} </ion-label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+                </div>
+
+                <h5 *ngIf="jobList=='' && myJobs=='true'" class="No-record">No active jobs found, Please try again later.</h5>
+
+
+            </div>
+        </div>
+    </div>
+    <!--<ion-spinner text-center name="bubbles"></ion-spinner>-->
+</ion-content>

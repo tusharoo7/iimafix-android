@@ -1,0 +1,153 @@
+page-login {
+    .logo {
+        display: block;
+        margin: 40px auto 15px;
+        width: 126px;
+    }
+    .login-wrapper {
+        h2 {
+            //font-family: $roboto;
+            color: #3c3c3c;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    .list-md,
+    .list-ios {
+        margin: -1px 0 0;
+    }
+    // .login-form-wrap {
+    //     .item-inner {
+    //         padding: 0 !important;
+    //     }
+    //     input {
+    //         border: 1px solid #e8e8e8;
+    //         border-radius: 25px;
+    //         height: 46px;
+    //         text-indent: 40px;
+    //         width: 100%;
+    //         font-size: 14px;
+    //     }
+    //     ion-label {
+    //         position: relative;
+    //     }
+    //     i,
+    //     ion-icon {
+    //         left: 15px;
+    //         position: absolute;
+    //         top: 16px;
+    //         color: #ccc;
+    //     }
+    // }
+     .login-form-wrap {
+        .item-inner {
+            padding: 0 !important;
+        }
+        input {
+            border: 1px solid #e8e8e8;
+            border-radius: 25px;
+            height: 46px;
+            width: 100%;
+            font-size: 14px;
+            padding-left: 45px;
+        }
+        ion-label {
+            // position: relative;
+            position: absolute;
+            left: 8px;
+            z-index: 9999;
+            top: 14px;
+        }
+        i,
+        ion-icon {
+//            left: 15px;
+ //            position: absolute;
+ //            top: 16px;
+            color: #ccc;
+        }
+    }
+    .item-inner {
+        border: none !important;
+    }
+    .sign-in-bt {
+        background: $yellow;
+        @include bt-with-shadow;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        font-size: 16px;
+    }
+    .forget-pass {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .or-wrap {
+        position: relative;
+        background: $yellow;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto 7px;
+        &:after {
+            border-bottom: 1px dashed #ccc;
+            content: "";
+            position: absolute;
+            right: -92px;
+            top: 21px;
+            width: 64px;
+        }
+        &:before {
+            border-bottom: 1px dashed #ccc;
+            content: "";
+            position: absolute;
+            left: -92px;
+            top: 21px;
+            width: 64px;
+        }
+    }
+    .login-with-fb {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        @include bt-with-shadow;
+        box-shadow: none;
+        width: 100%;
+        color: $blue;
+        text-transform: none;
+        border: 1px solid #ccc;
+        i {
+            border-right: 1px solid $blue;
+            padding-right: 9px;
+            margin-right: 5px;
+        }
+    }
+    .login-wrapper {
+        margin-top: 50px;
+    }
+      @media(max-width:360px) {
+        .or-wrap {
+            margin:16px auto 20px;
+        }
+    }
+    @media(max-width:320px) {
+        .or-wrap {
+            margin: 0 auto 7px;
+        }
+    }
+  .label-md + ion-input .text-input, .label-md + ion-textarea .text-input, .label-md + .input + .cloned-input {
+margin-left: 0;
+margin-right: 0;
+width: 100%;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #333;
+}
+.toolbar-title-md, .toolbar-title-ios {
+    color: #333;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none;
+}
+}

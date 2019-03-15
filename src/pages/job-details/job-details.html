@@ -1,0 +1,175 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Job Details</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <ion-grid no-padding>
+        <ion-row no-padding>
+            <ion-col col-12>
+                <div class="map-container" #map id="map"></div>
+            </ion-col>
+            <ion-col col-12>
+                <div class="job-detail-title">
+                    <h2>{{category}}</h2>
+                </div>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <h3 style="text-align: center" *ngIf="details==''">No job found!</h3>
+            <ion-col col-12 *ngFor="let det of details;">
+                <div class="details-list-box-1">
+                    <ul>
+                        <li> <img src="assets/img/cat_icon.png" alt=""><b>Service: </b>
+                            <p> {{det.sub_category}}</p>
+                        </li>
+                        <li>
+                            <img src="assets/img/icon-1.png" alt=""><b>Service date:</b>
+                            <p> {{det.service_date}}</p>
+                        </li>
+                        <li>
+                            <img src="assets/img/icon-2.png" alt=""><b>Appt. time:</b>
+                            <p> {{det.service_from_time}} to {{det.service_to_time}}</p>
+                        </li>
+                        <li>
+                            <img src="assets/img/icon-3.png" alt=""><b>Location:</b>
+                            <p> {{det.address}}</p>
+                        </li>
+                        <li *ngIf="status=='Accepted' || status=='Running' || status=='Completed'|| status=='Review Pending'|| status=='Closed'">
+                            <img src="assets/img/icon-13.png" alt=""><b>Unit number:</b>
+                            <p> {{det.land_mark}}</p>
+                        </li>
+                        <li *ngIf="status=='Accepted' || status=='Running' || status=='Completed' || status=='Review Pending'|| status=='Closed'|| status=='Cancelled'">
+                            <img src="assets/img/icon-14.png" alt=""><b>Contact name:</b>
+                            <p> {{det.contact_person}} </p>
+                        </li>
+                        <li *ngIf="status=='Accepted' || status=='Running' || status=='Completed'|| status=='Review Pending'|| status=='Closed'|| status=='Cancelled'">
+                            <img src="assets/img/icon-15.png" alt=""><b>Contact no:</b>
+                            <p> {{det.contact_number}}</p>
+                        </li>
+                        <!--<li>
+                            <img src="assets/img/icon-15.png" alt=""><b>Requested unit:</b>
+                            <p> {{det.request_unit}}</p>
+                        </li>-->
+                        <!--<li>
+                            <img src="assets/img/icon-15.png" alt=""><b>Total cost:</b>
+                            <p> {{det.total_cost}}</p>
+                        </li>-->
+                        <li>
+                            <img src="assets/img/icon-1.png" alt=""><b>Posted on:</b>
+                            <p> {{det.posted_on}}</p>
+                        </li>
+                        <li *ngIf="status=='Accepted' || status=='Running' || status=='Completed'|| status=='Review Pending'|| status=='Closed'">
+                            <img src="assets/img/icon-18.png" alt=""><b>Job Id:</b>
+                            <p> {{det.jobId}}</p>
+                        </li>
+            
+                        <li>
+                            <img src="assets/img/payment-method-ion.png" alt="" ><b>Payment Mode :</b>
+                            <p>{{det.payment_mode}}</p>
+                        </li>
+                        <li class="total-cost"><img src="assets/img/icon-21.png" alt="">
+                            <b>{{det.service_charge_label}}</b>
+                            <p>{{det.total_cost}}</p>
+                        </li>
+                        <li class="total-cost"><img src="assets/img/icon-21.png" alt="">
+                            <b>Total amount paid </b>
+                            <p>{{ det.total_paid }} </p>
+                        </li>
+                        <div *ngIf="status=='Accepted' || status=='Running'">
+                        <li class="total-cost"><img src="assets/img/icon-21.png" alt="">
+                            <b>Total amount to be collected </b>
+                            <p>{{det.net_payable}}</p>                   
+                        </li>
+                    </div>
+                    </ul>
+                </div>
+            </ion-col>
+            <!--<ion-col col-4 class="details-list-img-wrapper">
+                <div class="details-list-box-2">
+                    <img src="{{image}}" />
+                </div>
+            </ion-col>-->
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <div class="job-status-wrapper">
+                    <ul>
+                        <li><img src="assets/img/icon-16.png" alt=""><b>Status: &nbsp;</b>
+                            <p> {{status_label}}</p>
+                        </li>
+                        <!--<li><img *ngIf="type=='Recommended'" src="assets/img/recomended-icon.png" alt="">
+                            <img *ngIf="type=='Matched'"
+                                src="assets/img/matched-icon.png" alt=""></li>-->
+                    </ul>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="desc-wrap">
+            <ion-col col-12 *ngIf="image!=''">
+                <div class="job-description" padding>
+                    <b>Description</b>
+                    <p>{{description}}</p>
+                </div>
+            </ion-col>
+            <ion-col col-12 *ngIf="image==''">
+                <div class="job-description" padding>
+                    <b>Description</b>
+                    <p>{{description}}</p>
+                </div>
+            </ion-col>
+            <ion-col *ngIf="image!=''"
+                col-12 class="details-list-img-wrapper">
+                <div class="details-list-box-2">
+                    <img src="{{image}}" imageViewer/>
+                </div>
+                </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-grid no-padding>
+            <ion-row *ngIf="status=='Open' && isVarified=='Verified'" class="single-band">
+
+                <ion-col col-12 (click)='servAcceptReject("Accepted")'>Accept job</ion-col>
+                <!--<ion-col col-6 (click)='servAcceptReject("Rejected")'>Reject</ion-col>-->
+                <!--<ion-col col-12>I am interested</ion-col>-->
+                <!--<span *ngIf="btnAccept=='true'">
+                <ion-col col-6>Start job</ion-col>
+                <ion-col col-6>Cancel</ion-col>              
+                </span>-->
+            </ion-row>
+            <ion-row *ngIf=" status=='Accepted'" class="single-band">
+                <ion-col col-12 (click)="jobStart();">Verify and start job</ion-col>
+                <!--<ion-col col-6>Cancel</ion-col>-->
+                <!--<ion-col col-12>I am interested</ion-col>-->
+            </ion-row>
+            <ion-row (click)='endJobSubmit();' *ngIf="status=='Running'" class="single-band end-job-wrap">
+
+                <ion-col col-12>Update job status</ion-col>
+                
+                <ion-select interface="action-sheet" [(ngModel)]="jobStatus" (ngModelChange)="selectStatus($event)" [selectOptions]="selectOptions">
+                    <ion-option value="complete">Job finished (no more visit needed)</ion-option>
+                    <ion-option value="pending">New visit/quotation required for this job</ion-option>
+                    <ion-option value="notComplete">Unable to complete the job</ion-option>
+                </ion-select>
+
+            </ion-row>
+            <ion-row *ngIf="status=='Rejected'" class="single-band">
+                <!--<ion-col col-6>Accept</ion-col>
+                <ion-col col-6>Reject</ion-col>-->
+                <ion-col col-12>{{status}}</ion-col>
+            </ion-row>
+            <ion-row *ngIf="status=='Open' && isVarified=='NotVerified'" class="single-band">
+                <!--<ion-col col-6>Accept</ion-col>
+                <ion-col col-6>Reject</ion-col>-->
+                <ion-col col-12 (click)="IMIntersted();">I am interested</ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

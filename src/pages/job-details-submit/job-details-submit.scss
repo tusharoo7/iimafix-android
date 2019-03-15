@@ -1,0 +1,274 @@
+page-job-details-submit {
+    .first-step-form-wrap {
+        h2 {
+            //            border: 1px solid #333;
+            padding: 10px 5px;
+            text-align: center;
+            font-size: 14px;
+            background: $yellow;
+            color: #fff;
+            margin: 0;
+        }
+        .img-box {
+            height: 80px;
+            width: 80px;
+            line-height: 86px;
+            text-align: center;
+            border: 1px solid #ccc;
+            float: left;
+            position: relative; // margin: 4px;
+          overflow: hidden;
+             margin: 0 5px 5px 0;
+             img{
+                 position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+             }
+            i {
+                font-size: 20px;
+                color: #ccc;
+            }
+            ion-icon {
+               color: #333;
+    font-size: 26px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+            }
+        }
+        h3 {
+            font-size: 14px;
+            margin: 8px 0;
+
+        }
+    }
+   
+}
+
+.additional-remarks {
+    overflow: hidden;
+    h4 {
+        font-size: 14px;
+        margin-top: 10px !important;
+        display: block;
+        margin: 8px 0;
+    }
+
+    ion-textarea {
+        border: 1px solid #ccc;
+        height: 80px;
+
+    }
+    .text-input-md,
+    .text-input-ios {
+        margin: 5px
+    }
+}
+
+/*.image-box-wrap {
+    overflow: hidden;
+}
+*/
+.unble-to-complte {
+    overflow: hidden;
+    .item-md,
+    .item-ios {
+        padding-left: 0;
+    }
+    .item.item-md .checkbox-md,
+    .item.item-ios .checkbox-ios {
+
+        margin: 9px 9px 9px 4px;
+    }
+    .checkbox-md + .item-inner ion-label,
+    .checkbox-ios + .item-inner ion-label {
+        margin-left: 0;
+        font-size: 13px;
+    }
+}
+
+
+
+.second-step-form-wrap {
+
+    h2 {
+        //            border: 1px solid #333;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 14px;
+        background: $yellow;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+.datetime-wrapper {
+    h3 {
+        margin-top: 20px !important;
+        font-size: 14px;
+
+    }
+    p {
+        font-size: 12px;
+        color: #ccc;
+    }
+    .item-md,
+    .item-ios {
+        padding: 0;
+    }
+    ion-list {
+        overflow: hidden;
+        margin: 12px 0;
+        ion-item:last-child {
+            margin-right: 0;
+        }
+    }
+    ion-item {
+
+        width: 48.7%;
+        float: left;
+        border: 1px solid #ccc;
+        margin-right: 2.5%
+    }
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+        border: none;
+    }
+    .label-md {
+        margin: 13px 8px 13px 18px;
+    }
+    ion-label {
+        opacity: 0.5
+    }
+    ion-label.custom-class {
+        opacity: 1
+    }
+}
+
+.third-step-form-wrap {
+    h2 {
+        //border: 1px solid #333;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 14px;
+        background: $yellow;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+.description-boxes {
+    textarea {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    ion-input {
+        border: 1px solid #ccc;
+        height: 44px;
+        line-height: 41px;
+        text-indent: 0px;
+
+    }
+    .text-input-md,
+    .text-input-ios {
+        margin: 0 0 0 20px;
+        line-height: 35px;
+        text-indent: 0;
+        width: 100%;
+
+    }
+    p {
+        margin: 0;
+        color: #ccc;
+    }
+}
+
+.add-bt {
+    background: none;
+    border: 1px solid #ccc;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 19px auto;
+}
+
+.login-form-wrap {
+    .sign-in-bt {
+        background: $yellow;
+        @include bt-with-shadow;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+    }
+}
+
+.description-title-wrap {
+    textarea {
+        width: 100%;
+        height: 120px;
+        border: 1px solid #ccc;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 8px 0;
+    }
+
+}
+
+.description-boxes {
+    h3 {
+        line-height: normal;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 8px !important;
+    }
+}
+
+.step-2-title-box {
+    margin-top: 11px;
+}
+
+
+
+.description-title-wrap {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.service-report-wrap {
+    padding: 5px 16px;
+.unable-complete {
+   color: darkred;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 13px 0 5px;
+    text-align: center;
+}
+}
+
+.list-md,
+.list-ios {
+    margin: 0;
+}
+
+.label-md,
+.label-ios {
+    margin: 13px 8px 13px 13px;
+}
+
+.date-picker {
+    height: 100vh;
+}
+
+.date-picker[_ngcontent-c0] .top-banner[_ngcontent-c0] {
+    background: #463092 none repeat scroll 0 0 !important;
+}
+
+.date-picker[_ngcontent-c0] .day-selected[_ngcontent-c0] {
+    background-color: #f47520 !important;
+}
+.picker-md .picker-opt {font-size: 21px;}

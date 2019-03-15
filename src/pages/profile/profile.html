@@ -1,0 +1,91 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding class="profile-wrap">
+    <ion-grid>
+        <ion-row class="login-wrapper animated fadeIn">
+<!--<ion-col col-12>
+    <h2>Join with email</h2>
+</ion-col>-->
+            <ion-col col-12 class="pro-pic-wrap">
+                <div class="pro-pic-box-container">
+                    <div class="pro-pic-box" (click)='openProImg();'>
+                        <img src="{{userImg}}" alt="">
+
+                    </div>
+                    <div class="browse-bt" (click)='getImageSource();'><i class="fa fa-camera" aria-hidden="true"></i></div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <h2>{{userEmail}}</h2>
+            </ion-col>
+            <ion-col col-12>
+                <ion-list class="login-form-wrap animated fadeIn">
+                    <ion-item no-padding>
+                       <ion-label><i class="fa fa-user-o" aria-hidden="true"></i></ion-label> 
+                        <ion-input type="text" placeholder="Name" [(ngModel)]='userName'></ion-input>
+                    </ion-item>
+                    <ion-item no-padding>
+                        <ion-label><i aria-hidden="true"><img src="assets/img/icon-10.png" alt=""></i></ion-label> 
+                        <ion-input type="text" placeholder="Company name" [(ngModel)]='companyName'></ion-input>
+                    </ion-item>
+                     <ion-item no-padding>
+                       <ion-label> <i aria-hidden="true"><img src="assets/img/icon-16.png" alt=""></i></ion-label> 
+                        <ion-input type="text" placeholder="Company registration No" [(ngModel)]='company_reg_no'></ion-input>
+                    </ion-item>
+                    <ion-item no-padding>
+                       <ion-label> <i aria-hidden="true"><img src="assets/img/icon-11.png" alt=""></i></ion-label> 
+                        <ion-input type="tel" placeholder="Contact number" [(ngModel)]='userContactNo' maxlength="15"></ion-input>
+                    </ion-item>
+                    <!--<ion-item no-padding>
+                        <ion-label><i class="fa fa-credit-card" aria-hidden="true"></i></ion-label> 
+                        <ion-input type="number" placeholder="Bank A/C No." [(ngModel)]='userBankAccount'></ion-input>
+                    </ion-item>-->
+                    <!--<ion-item no-padding *ngIf="isUserVarified=='Verified' && uploadCertification=='SHOWBLANK'">
+                        <button class="certifications" (click)="certificatePicker();"><img src="assets/img/icon-12.png" alt="">Upload certification</button>
+                    </ion-item>-->                   
+                </ion-list>
+            </ion-col>
+            <ion-col col-12>
+                 <div no-padding *ngIf="isUserVarified=='NotVerified'">
+                        <button class="certifications" (click)="getImageSourceCer();"><img src="assets/img/icon-12.png" alt="">{{btnText}}</button>
+                    </div>
+
+                    <div no-padding *ngIf="certificateNme!='' &&  uploadCertification!='SHOWBLANK'">
+                        <button class="link-bt" (click)="openImg()"><i class="fa fa-link" aria-hidden="true"></i>{{certificateTxt}}</button>
+                    </div>
+            </ion-col>
+            <ion-col col-12 class="push-noty">
+                <ion-item>Verified: {{varifiedCap}}</ion-item>
+                <ion-item>
+                    <ion-label> Push notification</ion-label>
+                    <ion-toggle [(ngModel)]="isPushEnable"></ion-toggle>
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-12>
+                <div class="profile-services-list"><b>Services: </b>{{userCat}}
+
+                </div>
+            </ion-col>
+            <ion-col col-12>
+                <div class="login-form-wrap">
+                    <span no-padding (click)='updateProfile();'>
+                        <button class="sign-in-bt" type="submit">Submit</button>
+                    </span>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,95 @@
+page-start {
+    .intro-wrap {
+        //background: url(../assets/img/intro-bg.jpg);
+        background-size: cover;
+        background-color: #463092;
+    }
+    .logo-wrap {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        margin: 0;
+        display: block;
+        margin: 25px auto;
+          @media(max-width: 360px) {
+            margin: 125px auto 25px;
+        }
+        @media(max-width: 320px) {
+            margin: 25px auto;
+        }
+
+        .item-inner {
+            border: none !important;
+        }
+        a.logo {
+            display: block;
+            width: 126px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .swiper-slide {
+        //        display: block;
+        h3 {
+            margin: 0;
+            color: #0e0e0e;
+            //font-family: $lato;
+            font-weight: 300;
+        }
+        h1 {
+            color: $blue;
+            margin: 0;
+            font-size: 18px;
+        }
+        p {
+            color: #1e1e1e;
+            font-size: 14px;
+            line-height: 27px;
+        }
+    }
+    ion-slide {
+        //        height: auto;
+        //        margin-top: 40px;
+        background-size: cover;
+    }
+    .slide-zoom {
+        padding: 29px;
+    }
+    .login-bt-wrap {
+        padding: 0;
+    }
+    .login-bt-wrap {
+        padding: 0 16px;
+        width: 100%;
+        z-index: 9999;
+        margin: 30px 0;
+        
+        .login-bt {
+            width: 100%;
+            background: #f47520;
+            @include bt-with-shadow;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+        .signup-bt {
+            width: 100%;
+            background: #FCC69A;
+            @include bt-with-shadow;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+    }
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 155px;
+        left: 0;
+        width: 100%;
+    }
+    .intro-content {
+       padding: 0 2px 24px;
+        text-align: center;
+        color:#fff;
+        font-weight: bolder;
+    }
+    .scroll-content{top:-32px !important;}
+}

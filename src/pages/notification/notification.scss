@@ -1,0 +1,57 @@
+page-notification {
+
+    .notification-box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        overflow: hidden;
+        p {
+            display: block;
+            margin: 0 0 5px;
+        }
+        span {
+            float: right;
+            ion-icon {
+                float: left;
+            }
+            h2 {
+                float: left;
+                font-size: 14px;
+                margin: 0 0 0 8px;
+            }
+        }
+    }
+
+   .No-record{
+        left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -100%);font-size: 16px; font-weight: normal;
+    }
+
+}
+
+.alert-head {
+    i {
+        color: forestgreen;
+        font-size: 42px;
+        text-align: center;
+        display: block;
+        margin-bottom: 17px;
+    }
+    b {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+}
+
+.alert-button-group button.alert-button:first-child {
+    background: #1E4294;
+    padding: 12px 13px;
+    color: #fff;
+    border-radius: 25px;
+    width: 45%;
+    margin: 0 auto;
+}

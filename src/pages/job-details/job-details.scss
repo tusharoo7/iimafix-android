@@ -1,0 +1,248 @@
+page-job-details {
+    .job-detail-title {
+        background: $yellow;
+        padding: 14px 0;
+        h2 {
+            color: #fff;
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    .details-list-box-1 {
+        // border-right: 1px solid #ccc;
+        //font-size: 11px;
+        li {
+            align-items: center;
+            display: flex;
+            margin: 21px 0 0 14px;
+            overflow: hidden;
+            vertical-align: middle;
+            width: 100%;
+            img {
+                float: left;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+                align-self: start;
+                display: flex;
+            }
+            b {
+                float: left;
+                margin-right: 6px;
+                width: 32%;
+                align-self: start;
+                display: flex;
+            }
+            p {
+                float: left;
+                margin: 0;
+                color: #737373;
+                width: 50%;
+            }
+        }
+    }
+    .details-list-box-2 {
+        margin: 0 auto;
+        width: 150px;
+    }
+    .details-list-img-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .job-status-wrapper {
+        padding: 12px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        margin: 30px 0 5px; //font-size: 11px;
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        li {
+            width: 50%;
+            float: left;
+            padding: 0 14px;
+            position: relative;
+            img {
+                float: left;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+            b {
+                float: left;
+
+            }
+            p {
+                float: left;
+                margin: 0;
+                width: 62%;
+            }
+            &:last-child {
+                float: right;
+                width: 100%;
+                img {
+                    float: left;
+                    width: 18px
+                }
+            } // &:first-child:after {
+            //     border: 1px solid #ccc;
+            //     content: "";
+            //     height: 20px;
+            //     position: absolute;
+            //     right: -27px;
+            //     top: 0;
+            // }
+        }
+    }
+    ion-footer {
+        .dual-band {
+            ion-col {
+                text-align: center;
+                padding: 18px !important;
+                color: #fff;
+                background: #2d1a70;
+                text-transform: uppercase;
+                &:last-child {
+                    background: #ffc845;
+                    color: #333;
+                }
+            }
+        }
+        .single-band {
+            ion-col {
+                text-align: center;
+                padding: 18px !important;
+                color: #fff !important;
+                background: $yellow!important;
+                text-transform: uppercase;
+            }
+        }
+        .toolbar-md,
+        .toolbar-md {
+            min-height: unset;
+            padding: 0;
+        }
+    }
+    #map {
+        height: 150px;
+        width: 100%;
+    }
+    .desc-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 54px;
+    }
+    .sub-cat-boxes {
+        border-bottom: 1px solid #f5f5f5;
+        margin: 11px;
+        overflow: hidden;
+        padding-bottom: 12px;
+        li {
+            background: #a9c0f2 none repeat scroll 0 0;
+            border-radius: 15px;
+            float: left;
+            font-size: 11px;
+            margin: 2px;
+            padding: 7px 22px;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    /*--------------------oct 23----------------------*/
+    li.total-cost {
+        margin-left: 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        img {
+            margin: 10px 5px 0 14px;
+            align-self: start;
+        }
+        p {
+            border: 1px solid #ccc;
+            padding: 4px;
+            float: right;
+            margin: 5px;
+            width: 24%;
+            text-align: center;
+        }
+
+        b {
+            padding: 10px;
+            width: 58%;
+            padding-left: 0;
+        }
+    }
+    .end-job-wrap {
+        position: relative;
+        ion-select {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: unset;
+            height: 100%;
+        }
+    }
+.action-sheet-sub-title {
+    background: $blue none repeat scroll 0 0;
+    color: #fff;
+    padding: 12px;
+}
+
+.action-sheet-md .action-sheet-button {
+    border-bottom: 1px solid #ccc;
+}
+
+.action-sheet-cancel.action-sheet-button {
+    background: $yellow none repeat scroll 0 0 !important;
+    border-radius: 35px;
+    color: #fff !important;
+    display: block;
+    margin: 12px auto;
+    width: 50%;
+    .button-inner {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.action-sheet-md .action-sheet-container {
+    padding: 0;
+}
+}
+.alert-head {
+    i {
+        color: forestgreen;
+        font-size: 42px;
+        text-align: center;
+        display: block;
+        margin-bottom: 17px;
+    }
+     i.cross {
+        color: red !important;
+        font-size: 42px;
+        text-align: center;
+        display: block;
+        margin-bottom: 17px;
+    }
+    b {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+}
+.action-sheet-md .action-sheet-container, .action-sheet-ios .action-sheet-container {
+    background-color: rgba(0,0,0,.8);
+    padding: 0 0;
+}
+.action-sheet-md .action-sheet-group:first-child {
+    padding-top: 0;
+}

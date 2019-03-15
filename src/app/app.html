@@ -1,0 +1,55 @@
+<ion-menu [content]="content" persistent="true">
+    <!--
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Menu</ion-title>
+    </ion-toolbar>
+</ion-header>
+-->
+    <ion-content>
+        <ion-grid no-padding>
+            <ion-row no-padding>
+                <ion-col col-12>
+
+                    <div class="profile-box-wrap">
+                        <div class="pro-box">
+                            <img src="{{profImg}}" alt="">
+                        </div>
+                        <div class="pro-box-info">
+                            <h2>{{userName}}</h2>
+                            <h3>{{userEmail}}</h3>
+                            <div *ngIf="spRating!='0.00'" class='sp-rating'>{{spRating}}
+                                <ion-icon ios="ios-star" md="md-star"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-list class="menu-wrap">
+        <button menuClose ion-item (click)='openLink("http://iimafix.com/about-iimafix")'>
+       About us
+      </button>
+            <button menuClose ion-item (click)='openLink("http://iimafix.com/terms-use")'>
+        Terms and conditions
+      </button>
+        <button menuClose ion-item (click)='openLink("http://iimafix.com/privacy-policy")'>
+        Privacy policy
+      </button>
+        <button menuClose ion-item (click)='openLink("http://iimafix.com/contact-us")'>
+        Contact us
+      </button>
+            <button menuClose ion-item (click)="chngPass()">
+       Change password
+      </button>
+            <button menuClose ion-item (click)="logout()">
+        Logout
+      </button>
+      <button menuClose ion-item >{{checkmode}}</button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

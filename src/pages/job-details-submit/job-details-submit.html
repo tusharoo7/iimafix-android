@@ -1,0 +1,142 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Job Report</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content no-padding>
+    <ion-grid no-padding>
+        <ion-row no-padding>
+            <ion-col col-12>
+                <div *ngIf="jobStatus=='complete' || jobStatus=='pending' || jobStatus=='notComplete'" class="first-step-form-wrap">
+                    <div class="step-1-title-box">
+                        <h2><span *ngIf="jobStatus=='pending'">Step 1:</span> Service Report</h2>
+                    </div>
+                   
+                    <div class="service-report-wrap">
+                         <div *ngIf="jobStatus=='notComplete'" class='unable-complete'>Unable to complete this job</div>
+                    <h3>Submit image(s) of service done</h3>
+                    <div class="image-box-wrap clearfix">
+                        <div class="img-box" (click)='getImageSource();'><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-box" *ngFor="let img of imgDataView;let i=index;">
+                            <img src="{{img.img}}" />
+                            <ion-icon name="close-circle" (click)='removeImg(i);'></ion-icon>
+                        </div>
+                        <!--<div class="img-box">
+                            <img src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg" />
+                            <ion-icon name="close-circle" (click)='removeImg(i);'></ion-icon>
+                        </div>-->
+
+                        <!--<div class="img-box">img-2</div>
+                        <div class="img-box">img-3</div>
+                        <div class="img-box">img-4</div>
+                        <div class="img-box">img-5</div>-->
+                    </div>
+
+                    <div class="additional-remarks">
+                        <h4>Additional remarks</h4>
+                        <ion-textarea [(ngModel)]="remark">Remarks</ion-textarea>
+                        <!--<div class="unble-to-complte">
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label>Unable to complete</ion-label>
+                                    <ion-checkbox></ion-checkbox>
+                                </ion-item>
+                            </ion-list>
+                        </div>-->
+                    </div>
+                
+                    <!--//cash {{paymentmode}} {{jobStatus}} recived-->
+                    
+                    <div *ngIf="jobStatus!='notComplete' && paymentmode=='COD' ">
+                       
+                                <div class="description-boxes">
+                                        <h4 style="font-size: 14px;">Cash Received</h4>
+                                        <ion-input type="number"  ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
+                                        [(ngModel)]="cashrecived" placeholder="0.00" ></ion-input>
+            
+                                    </div>
+                       
+                       
+                    </div>
+
+                </div>
+
+                </div>
+                <div *ngIf="jobStatus=='pending'" class="second-step-form-wrap">
+                    <div class="step-2-title-box">
+                        <h2>Step 2: Next Appointment</h2>
+                    </div>
+  <div class="service-report-wrap">
+                    <div class="datetime-wrapper">
+                        <ion-list>
+                        <!--<ion-item>
+                           
+                            <ion-datetime displayFormat="DD-MM-YYYY" placeholder='Date' min="2017" max="2020-12-31" [(ngModel)]="myDate"></ion-datetime>
+                        </ion-item>-->
+                        <!--<p>(Optional)</p>-->
+                     <ion-item (click)="showCalendar()">
+                         
+                       <ion-label *ngIf="dateFlag=='false'">{{myDate}}</ion-label>
+                        <ion-label class="custom-class" *ngIf="dateFlag=='true'">{{myDate}}</ion-label>
+                           <!--<ion-input type='text' disabled="{{dateFlag}}" [(ngModel)]="myDate" placeholder='Date'></ion-input>-->
+                        </ion-item>
+                   
+                        <ion-item>
+                            <!--<ion-label>Time</ion-label>-->
+                            <ion-datetime id='mdate'displayFormat="h:mm A" placeholder='Time' [(ngModel)]="adjustedTime" ></ion-datetime>
+                        </ion-item>
+                        </ion-list>
+                        <!--<p>(Optional)</p>-->
+                    </div></div>
+                </div>
+                <!--<div class="third-step-form-wrap">
+                    <div class="step-3-title-box">
+                        <h2>Step 3 : Service Report</h2>
+                    </div>
+                </div>-->
+                <div *ngIf="jobStatus=='pending'" class="third-step-form-wrap">
+                    <div class="step-3-title-box">
+                        <h2>Step 3: Quotation</h2>
+                    </div>
+                      <div class="service-report-wrap">
+                    <div class="description-wrap">
+                        <div class="description-title-wrap">
+                            <ion-grid no-padding>
+                                <ion-row>
+                                    <ion-col col-12>
+                                        <h3>Description</h3>
+                                    </ion-col>
+                                    <ion-col col-12><textarea name="" id="" [(ngModel)]="descrpn"></textarea></ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </div>
+                        <div class="description-boxes">
+                            <ion-grid no-padding>
+                                <ion-row>
+
+                                    <ion-col col-12>
+                                        <h3> Amount</h3>
+                                    </ion-col>
+                                    <ion-col col-12>
+                                        <ion-input type="number" placeholder="Amount" [(ngModel)]="price"></ion-input>
+                                    </ion-col>
+                                </ion-row>
+
+                            </ion-grid>
+                        </div>
+                    </div></div>
+                </div>
+            </ion-col>
+            <ion-col col-12>
+                <ion-list class="login-form-wrap">
+                    <ion-item no-padding (click)="serviceDetailsSubmit();">
+                        <button class="sign-in-bt" type="submit">Submit</button>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

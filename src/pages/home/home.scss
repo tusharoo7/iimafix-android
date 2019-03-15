@@ -1,0 +1,161 @@
+page-home {
+    .custom-tab-hame-wrapper {
+        overflow: hidden;
+    }
+    .tab-title-cont {
+        overflow: hidden;
+        background: $yellow;
+        a {
+            color: #fff;
+            display: inline-block;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            width: 49.4%;
+            float: left;
+            text-transform: uppercase;
+        }
+        .active {
+            border-bottom: 2px solid $blue;
+        }
+    }
+    .job-alerts-box {
+        //        border: 1px solid #ccc;
+        //        margin: 12px 12px;
+        padding: 0;
+        h2 {
+            //            border-bottom: 1px solid #ccc;
+            //            font-size: 14px;
+            //            margin: 0;
+            //            padding: 7px 12px;
+            font-size: 16px;
+            margin: 0;
+            padding: 7px 12px 0;
+            font-family: 'metropolissemi_bold';
+        }
+    }
+    .job-alerts-content-wrapper {
+        clear: both;
+        overflow: hidden;
+    }
+    .job-alerts-box-col-1 {
+        position: relative;
+        height: 100%;
+        padding: 12px 12px 0;
+
+        li {
+            overflow: hidden;
+            margin-bottom: 8px;
+            img {
+                width: 16px;
+                float: left;
+                margin-right: 5px;
+            }
+            b {
+                float: left;
+                font-size: 14px;
+            }
+            p {
+                float: left;
+                font-size: 14px;
+                margin: 0;
+
+            }
+            ion-label {
+                margin: 0;
+               width: 63%;
+            }
+        }
+
+        .pos-ab {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            p {
+                margin-left: 14px;
+            }
+        }
+    }
+    .job-posted {
+        //        border-top: 1px solid #ccc;
+        //        padding: 7px 12px 0;
+        background: #e5e5e5 none repeat scroll 0 0;
+        padding: 7px 12px 0;
+        p {
+            width: 70% !important;
+        }
+    }
+    .job-alerts-content-wrapper {
+        background: #fff;
+        margin-bottom: 5px;
+    }
+    .pending {
+        color: red;
+    }
+
+
+    .Accepted {
+        color: #f90000;
+    }
+    .Cancell {
+        color: black
+    }
+    ;
+    .Closed {
+        color: gray
+    }
+    ;
+    .complete {
+        color: green
+    }
+    .Running {
+        color: #ffc845
+    }
+    .badge {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-45%, -50%);
+        img {
+            width: 32px;
+        }
+    }
+    #alrts {
+        background: #efeded;
+    }
+    .home-new-wrap {
+        margin-bottom: 100px;
+    } //     ion-spinner {
+    //     bottom: -296px;
+    //     display: inline-block;
+    //     height: 28px;
+    //     left: 143px;
+    //     position: absolute;
+    //     //top: 281px;
+    //     width: 28px;
+    // }
+    .refresh-btn {
+        position: absolute;
+        right: 18px;
+        top: 16px;
+        background: none !important;
+        background-color: none !important;
+        box-shadow: none !important;
+    }
+    ion-icon {
+        color: #fff;
+        font-size: 22px;
+    }
+    .toolbar-content-md {
+        .refresh-btn {
+            right: 9px;
+            top: 16px;
+        }
+    }
+    .No-record{
+        left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -100%);font-size: 17px; font-weight: normal;
+    }
+}

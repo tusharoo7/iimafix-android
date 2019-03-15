@@ -1,0 +1,35 @@
+<!--
+  Generated template for the StartJobPopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>StartJobPopup</ion-title>
+    </ion-navbar>
+
+</ion-header>
+-->
+
+
+<ion-content no-padding>
+    <div class="qr-code-wrap">
+        <div class="qr-image">
+            <ion-icon ios="ios-close-circle" md="ios-close-circle" (click)='modalhide();'></ion-icon>
+            <h2>Click below image to initiate scan</h2>
+            <img src="assets/img/qrScan.png" alt="" (click)="loadScan();">
+
+             <div class="or-wrap">OR</div>
+        </div>
+       
+        <div class="enter-otp">
+            <ion-input type="text"[(ngModel)]="requestNo" placeholder="Enter request no"></ion-input>
+
+            <button class="sign-in-bt" type="submit" (click)="startJob();">Next</button>
+        </div>
+    </div>
+
+</ion-content>

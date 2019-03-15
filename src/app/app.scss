@@ -1,0 +1,642 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$blue:#463092;
+$yellow:#f47520;
+//$lato:'Lato';
+//$roboto:'Roboto',
+//sans-serif;
+body {
+    font-size: 14px;
+    font-family: 'metropolisregular';
+}
+
+ion-app.md, ion-app.ios {
+    font-family: 'metropolisregular';
+}
+
+.toolbar-title,
+.tab-title-cont a {
+    font-family: 'aleoregular';
+    //text-transform: uppercase;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin bt-with-shadow {
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    padding: 15px 26px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.swiper-pagination-bullet-active {
+    background: #3c3b3b
+}
+
+.g-back-bt {
+    background: transparent none repeat scroll 0 0;
+    font-size: 32px;
+    font-weight: normal;
+    height: 39px;
+    left: -34px;
+    position: absolute;
+    top: -19px;
+    width: 71px;
+}
+
+.toolbar-background-md,
+.toolbar-background-ios {
+    background: $blue;
+}
+
+.toolbar-title-md,
+.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.bar-button-default-md,
+.bar-button-clear-md-default,
+.bar-button-md-default {
+    color: #fff;
+}
+
+.bar-button-default-ios,
+.bar-button-clear-ios-default,
+.bar-button-ios-default {
+    color: #fff;
+}
+
+.tabs-md .tab-button[aria-selected="true"] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected="true"] .tab-button-icon {
+    color: $yellow;
+  
+}
+
+.tabs-md .tab-button[aria-selected="true"],
+.tabs-ios .tab-button[aria-selected="true"] {
+    color: $yellow;
+    padding: 0;
+    font-family: 'aleoregular';
+}
+
+.tabs-md .tabbar,
+.tabs-ios .tabbar {
+    background: $blue none repeat scroll 0 0;
+}
+
+.tabs-md[tabsLayout="icon-top"] .has-icon .tab-button-text,
+.tabs-ios[tabsLayout="icon-top"] .has-icon .tab-button-text {
+    color: #fff;
+}
+
+
+
+.tabs-md[tabsLayout="icon-top"] .has-icon .tab-button-text {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'aleoregular';
+}
+
+.tabs-md .tab-button-text,
+.tabs-ios .tab-button-text {
+    font-size: 11px;
+}
+
+.tabs-md .tab-button {
+    border-right: 1px solid #325fc4;
+}
+
+.bar-button-default-md:hover:not(.disable-hover),
+.bar-button-clear-md-default:hover:not(.disable-hover),
+.bar-button-md-default:hover:not(.disable-hover) {
+    color: #fff;
+}
+
+.header-title {
+    font-size: 13px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 20px);
+    //text-transform: uppercase;
+    font-family: "aleoregular";
+}
+
+.checkbox-md .checkbox-checked {
+  //  background-color: #1E4294;
+    border-color: #463092; background:#463092;
+}
+
+.checkbox-md .checkbox-icon {
+    border-color: #463092;
+}
+
+
+/*-------------------------------------LEFT PUSH MENU----------------------------------------------------------------*/
+
+.pro-box {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.23);
+    background: #fff;
+    position: relative;
+    img {
+        // border: 0 none;
+        // height: 100% !important;
+        // width: 100% !important;
+        border: 0 none;
+        height: 100% !important;
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.profile-box-wrap {
+    padding: 20px;
+    background: $yellow;
+}
+
+.pro-box-info {
+    color: #302202;
+    text-align: center;
+    h2 {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 13px;
+        color: #fff;
+    }
+}
+
+.menu-wrap {
+    margin-top: 10px;
+    .item-md {
+        padding-left: 0;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: none;
+        padding: 0 12px 0 40px;
+    }
+    button {
+        color: #7d7d7d;
+        &:nth-child(1) {
+            background: url(../assets/img/icon-5.png) no-repeat 12px center;
+            background-size: 20px auto;
+        }
+        &:nth-child(2) {
+            background: url(../assets/img/icon-6.png) no-repeat 12px center;
+            background-size: 15px auto;
+        }
+        &:nth-child(3) {
+            background: url(../assets/img/icon-7.png) no-repeat 12px center;
+            background-size: 16px auto;
+        }
+        &:nth-child(4) {
+            background: url(../assets/img/icon-8.png) no-repeat 12px center;
+            background-size: 13px auto;
+        }
+        &:nth-child(5) {
+            background: url(../assets/img/change-pass.png) no-repeat 9px center;
+            background-size: 21px auto;
+        }
+        &:nth-child(6) {
+            background: url(../assets/img/icon-9.png) no-repeat 12px center;
+            background-size: 17px auto; // border-top: 1px solid #ccc;
+            //margin-top: 25px;
+        }
+        &:nth-last-child(1) {
+            border-top: 1px solid #ccc;
+            margin-top: 25px;
+        }
+    }
+}
+
+
+/*--------------------------FOR  HEADER BAR TEXT GAPPING---------------------*/
+
+.toolbar-title-md {
+    padding: 5px 20px 0 0;
+}
+
+.alert-md .alert-title {
+    font-size: 14px;
+}
+
+
+
+
+
+/*FOR iOS*/
+
+.list-ios > .item-block:first-child {
+    border-top: none;
+}
+
+.list-ios > .item-block:last-child,
+.list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+.sign-in-bt {
+    font-size: 16px !important;
+}
+
+.login-with-fb {
+    font-size: 16px;
+}
+
+/*------------HOVER------------------*/
+
+// .loading-wrapper{
+//       background-color:transparent !important;
+//     }
+//     .loading-md .loading-wrapper {
+//     background: #fafafa none repeat scroll 0 0;
+//     border-radius: 2px;
+//     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+//     color: rgba(0, 0, 0, 0.5);
+//     max-height: 42%;
+//     max-width: 280px;
+//     padding: 24px;
+// }
+// ion-spinner {
+//     display: inline-block;
+//     height: 70px;
+//     position: relative;
+//     width: 70px;
+// }
+.ios ion-nav > .ion-page > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-nav > .ion-page > ion-header > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-tab > .ion-page > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-tab > .ion-page > ion-header > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-tabs > .ion-page.tab-subpage > ion-header > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-menu > .menu-inner > ion-content.statusbar-padding:first-child .scroll-content,
+.ios ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child .scroll-content {
+    padding-top: 0;
+
+}
+
+.item-ios[detail-push] .item-inner,
+button.item-ios:not([detail-none]) .item-inner,
+a.item-ios:not([detail-none]) .item-inner {
+    padding-left: 40px;
+}
+
+.item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none;
+}
+
+
+
+
+.ion-ios-pulse-outline::before,
+.ion-md-pulse::before {
+    content: "";
+    background: url(../assets/img/home_icon.png) no-repeat center center;
+    width: 45px;
+    height: 26px;
+    background-size: 20px auto;
+}
+
+.ion-ios-tennisball-outline::before,
+.ion-md-tennisball::before {
+    content: "";
+    background: url(../assets/img/points_icon.png) no-repeat center center;
+    width: 51px;
+    height: 26px;
+    background-size: 24px auto;
+}
+
+.ion-ios-globe-outline::before,
+.ion-md-globe::before {
+    content: "";
+    background: url(../assets/img/noty_icon.png) no-repeat center center;
+    width: 51px;
+    height: 26px;
+    background-size: 20px auto;
+}
+
+.ion-ios-contact-outline:before,
+.ion-md-contact::before {
+    content: "";
+    background: url(../assets/img/profile_icon.png) no-repeat center center;
+    width: 51px;
+    height: 26px;
+    background-size: 20px auto;
+}
+
+.tabs-md .tab-button[aria-selected="true"],
+.tabs-ios .tab-button[aria-selected="true"] {
+    span.tab-button-text {
+        color: $yellow !important;
+    }
+    .ion-ios-pulse:before,
+    .ion-md-pulse::before {
+        content: "";
+        width: 51px;
+        height: 26px;
+        background: url(../assets/img/home_icon_h.png) no-repeat center center !important;
+        background-size: 20px auto !important;
+
+    }
+
+    .ion-ios-globe:before,
+    .ion-md-globe::before {
+        content: "";
+        background: url(../assets/img/noty_icon_h.png) no-repeat center center;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto;
+    }
+    .ion-ios-tennisball::before,
+    .ion-md-tennisball::before {
+        content: "";
+        background: url(../assets/img/points_icon_h.png) no-repeat center center;
+        width: 51px;
+        height: 26px;
+        background-size: 24px auto;
+    }
+    .ion-ios-contact:before,
+    .ion-md-contact::before {
+        content: "";
+        background: url(../assets/img/profile_icon_h.png) no-repeat center center;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto;
+
+    }
+
+}
+
+/*.tabs-md .tab-button[aria-selected="true"], .tabs-ios .tab-button[aria-selected="true"] {
+    span.tab-button-text {
+        color: #ffc845 !important;
+    }
+    .ion-ios-contact:before{
+        content: "";
+        background: url(../assets/img/profile_icon_h.png) no-repeat center center !important;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto !important;
+}
+    .ion-ios-pulse:before {
+        content: "";
+        width: 51px;
+        height: 26px;
+        background: url(../assets/img/home_icon_h.png) no-repeat center center !important;
+        background-size: 20px auto !important;
+    }
+   
+    .ion-ios-globe-outline:before {
+        content: "";
+        background: url(../assets/img/noty_icon_h.png) no-repeat center center !important;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto !important;
+    }
+}*/
+
+/*.tab-button:hover {
+    span.tab-button-text {
+        color: #ffc845 !important;
+    }
+    .ion-md-pulse:before, .ion-ios-pulse:before {
+        content: "";
+        width: 51px;
+        height: 26px;
+        background: url(../assets/img/home_icon_h.png) no-repeat center center;
+        background-size: 20px auto;
+    }
+    .ion-md-globe:before, .ion-ios-globe-outline:before {
+        content: "";
+        background: url(../assets/img/noty_icon_h.png) no-repeat center center;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto;
+    }
+    .ion-md-tennisball:before, .ion-ios-tennisball-outline:before {
+        content: "";
+        background: url(../assets/img/points_icon_h.png) no-repeat center center;
+        width: 51px;
+        height: 26px;
+        background-size: 24px auto;
+    }
+    .ion-md-contact:before, .ion-ios-contact:before {
+        content: "";
+        background: url(../assets/img/profile_icon_h.png) no-repeat center center !important;
+        width: 51px;
+        height: 26px;
+        background-size: 20px auto;
+    }
+}*/
+
+//.alert-button-group button.alert-button:first-child {
+//    margin: 15px !important;
+//}
+
+//.alert-button-group .alert-button:last-child {
+//    margin: 0 15px 15px !important;
+//}
+//.alert-button-group button.alert-button-md:first-child {
+//    margin: 0 0 0 auto !important;
+//}
+//.alert-button-group .alert-button-md:last-child {
+//    margin: 0 !important;
+//}
+.alert-md .alert-button-group {
+
+    text-align: center;
+}
+
+.alert-md .alert-button {
+    display: inline-block;
+}
+
+.button-inner {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.alert-md .alert-radio-label,
+.alert-ios .alert-radio-label {
+    white-space: normal;
+}
+
+.tabs-md .tab-button,
+.tabs-ios .tab-button {
+    border-right: 1px solid #2d1a70;
+}
+
+//.alert-button-group button.alert-button:first-child {
+//    margin-right: 6px !important;
+//}
+
+.alert-md .alert-head {
+    text-align: left;
+    text-align: start;
+    padding: 12px 24px 12px;
+}
+
+.alert-button-group button.alert-button:first-child {
+    background: $yellow;
+    padding: 12px 13px;
+    color: #fff;
+    border-radius: 25px;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.sp-rating {
+    font-weight: bold;
+    ion-icon {
+        font-size: 17px;
+    }
+}
+
+textarea {
+    font-weight: 200;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+*html .clearfix { height: 1%; }
+.clearfix { display: block; }
+ .action-sheet-md .action-sheet-container, .action-sheet-ios .action-sheet-container {
+  background: #fafafa none repeat scroll 0 0;
+  padding:0 0;
+}
+.action-sheet-sub-title {
+  background: $blue none repeat scroll 0 0;
+  color: #fff;
+  padding: 12px;
+  text-transform: uppercase;
+}
+.action-sheet-container .action-sheet-group:last-child{
+    .action-sheet-md .action-sheet-button{ width: 50%; background: $blue; margin: 0 auto;}
+}
+.action-sheet-cancel {
+  background:$yellow none repeat scroll 0 0 !important;
+  border-radius: 35px;
+  color: #fff !important;
+  display: block;
+  margin:12px auto;
+  text-align: center !important;
+  width: 50%;
+  .button-inner{display: block;}
+}
+.action-sheet-md .action-sheet-button {
+  border-bottom: 1px solid #ccc;
+}
+.toolbar-title-md {
+  padding: 0 20px 0 0;
+}
+.item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {
+    //    border-bottom-color: #488aff;
+    //    -webkit-box-shadow: inset 0 -1px 0 0 #488aff;
+    //    box-shadow: inset 0 -1px 0 0 #488aff;
+    border: none !important;
+    box-shadow: none;
+}
+/*----------FOR REMOVING ALL THE GRREN LINES AND BACKGROUND COLOR FROM INPUT AND BUTTON---------------------*/
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: #2e1b48 !important;
+    box-shadow: none !important;
+}
+
+.list-md .item-input.ng-valid.item-input-has-value:last-child:not(.input-has-focus):not(.item-input-has-focus),
+.list-md .item-input.ng-valid.input-has-value:last-child:not(.input-has-focus):not(.item-input-has-focus) {
+    border-bottom-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+.list-md .item-input.ng-valid.item-input-has-value:last-child:not(.input-has-focus):not(.item-input-has-focus),
+.list-md .item-input.ng-valid.input-has-value:last-child:not(.input-has-focus):not(.item-input-has-focus) {
+    border-bottom-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none;
+}
+
+.list-md .item-input:last-child {
+    border-bottom: none;
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+   border-bottom-color: none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+/*.text-input-md {
+    width:100%;
+}*/
+.title.title-md {
+    position: absolute;
+    left: 53%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
